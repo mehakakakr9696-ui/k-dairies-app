@@ -80,7 +80,7 @@ st.markdown(
         color: #881337;
         font-weight: 600;
         font-size: 16px;
-        margin-left: 10px;
+        margin-left: 12px;
     }
 
     .hangul-row {
@@ -153,8 +153,7 @@ if page == "✨ Intro & Welcome":
     st.markdown('<div class="main-subtitle">Your aesthetic daily Korean learning space ✨</div>', unsafe_allow_html=True)
 
     st.markdown(
-        """
-        <div class="content-box">
+        """<div class="content-box">
             <h3 style="color: #9f1239; margin-top:0;">🎀 Ready to start learning?</h3>
             <p style="color: #4c0519; font-size: 16px; line-height: 1.6;">
                 Welcome to your personal Korean learning diary! Learning a new language is an exciting journey, and the best way to begin is by mastering the basics step-by-step.
@@ -164,8 +163,7 @@ if page == "✨ Intro & Welcome":
                 1. 🔤 Use the sidebar to go to <b>Learn Hangul</b> and master the basic characters.<br>
                 2. 🎴 Switch to <b>Vocab Practice</b> to test your memory with interactive flashcards!
             </p>
-        </div>
-        """,
+        </div>""",
         unsafe_allow_html=True
     )
 
@@ -199,12 +197,7 @@ elif page == "🔤 Learn Hangul":
         
         html_content = '<div class="content-box">'
         for char, sound in consonants.items():
-            html_content += f'''
-            <div class="hangul-row">
-                <span class="hangul-char">{char}</span>
-                <span class="hangul-sound">Sounds like: <b>{sound}</b></span>
-            </div>
-            '''
+            html_content += f'<div class="hangul-row"><span class="hangul-char">{char}</span><span class="hangul-sound">Sounds like: <b>{sound}</b></span></div>'
         html_content += '</div>'
         st.markdown(html_content, unsafe_allow_html=True)
 
@@ -225,12 +218,7 @@ elif page == "🔤 Learn Hangul":
         
         html_content = '<div class="content-box">'
         for char, sound in vowels.items():
-            html_content += f'''
-            <div class="hangul-row">
-                <span class="hangul-char">{char}</span>
-                <span class="hangul-sound">Sounds like: <b>{sound}</b></span>
-            </div>
-            '''
+            html_content += f'<div class="hangul-row"><span class="hangul-char">{char}</span><span class="hangul-sound">Sounds like: <b>{sound}</b></span></div>'
         html_content += '</div>'
         st.markdown(html_content, unsafe_allow_html=True)
 
@@ -256,12 +244,10 @@ elif page == "🎴 Vocab Practice":
     correct_answer = vocab[current_word]
 
     st.markdown(
-        f"""
-        <div class="content-box">
+        f"""<div class="content-box">
             <p class="card-subtitle">WHAT DOES THIS MEAN?</p>
             <div class="korean-text">{current_word}</div>
-        </div>
-    """,
+        </div>""",
         unsafe_allow_html=True,
     )
 
