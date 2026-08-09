@@ -173,4 +173,115 @@ if page == "✨ Intro & Welcome":
 # PAGE 2: LEARN HANGUL
 # -------------------------------------------------------------
 elif page == "🔤 Learn Hangul":
-    st.markdown('<div class="main-title">🔤 Basic Hangul (한글)</div>', unsafe_allow_html
+    st.markdown('<div class="main-title">🔤 Basic Hangul (한글)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-subtitle">Master the Korean alphabet consonants & vowels ✨</div>', unsafe_allow_html=True)
+
+    tab1, tab2 = st.tabs(["Consonants (자음)", "Vowels (모음)"])
+
+    with tab1:
+        st.markdown("<h3 style='color: #9f1239;'>📌 Basic Consonants</h3>", unsafe_allow_html=True)
+        consonants = {
+            "ㄱ": "g / k",
+            "ㄴ": "n",
+            "ㄷ": "d / t",
+            "ㄹ": "r / l",
+            "ㅁ": "m",
+            "ㅂ": "b / p",
+            "ㅅ": "s",
+            "ㅇ": "silent (at start) / ng (at end)",
+            "ㅈ": "j",
+            "ㅊ": "ch",
+            "ㅋ": "k",
+            "ㅌ": "t",
+            "ㅍ": "p",
+            "ㅎ": "h"
+        }
+        
+        html_content = '<div class="content-box">'
+        for char, sound in consonants.items():
+            html_content += f'''
+            <div class="hangul-row">
+                <span class="hangul-char">{char}</span>
+                <span class="hangul-sound">Sounds like: <b>{sound}</b></span>
+            </div>
+            '''
+        html_content += '</div>'
+        st.markdown(html_content, unsafe_allow_html=True)
+
+    with tab2:
+        st.markdown("<h3 style='color: #9f1239;'>📌 Basic Vowels</h3>", unsafe_allow_html=True)
+        vowels = {
+            "ㅏ": "a (like 'ah')",
+            "ㅑ": "ya",
+            "ㅓ": "eo (like 'uh')",
+            "ㅕ": "yeo",
+            "ㅗ": "o (like 'oh')",
+            "ㅛ": "yo",
+            "ㅜ": "u (like 'oo')",
+            "ㅠ": "yu",
+            "ㅡ": "eu (like 'u' in 'pull')",
+            "ㅣ": "i (like 'ee')"
+        }
+        
+        html_content = '<div class="content-box">'
+        for char, sound in vowels.items():
+            html_content += f'''
+            <div class="hangul-row">
+                <span class="hangul-char">{char}</span>
+                <span class="hangul-sound">Sounds like: <b>{sound}</b></span>
+            </div>
+            '''
+        html_content += '</div>'
+        st.markdown(html_content, unsafe_allow_html=True)
+
+# -------------------------------------------------------------
+# PAGE 3: VOCAB PRACTICE
+# -------------------------------------------------------------
+elif page == "🎴 Vocab Practice":
+    st.markdown('<div class="main-title">🎴 Vocab Practice</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-subtitle">Test your memory on basic phrases ✨</div>', unsafe_allow_html=True)
+
+    vocab = {
+        "안녕하세요 (Annyeonghaseyo)": "hello",
+        "감사합니다 (Gamsahamnida)": "thank you",
+        "네 (Ne)": "yes",
+        "아니요 (Aniyo)": "no",
+        "죄송합니다 (Joesonghamnida)": "sorry",
+    }
+
+    if "word" not in st.session_state:
+        st.session_state.word = random.choice(list(vocab.keys()))
+
+    current_word = st.session_state.word
+    correct_answer = vocab[current_word]
+
+    st.markdown(
+        f"""
+        <div class="content-box">
+            <p class="card-subtitle">WHAT DOES THIS MEAN?</p>
+            <div class="korean-text">{current_word}</div>
+        </div>
+    """,
+        unsafe_allow_html=True,
+    )
+
+    user_answer = st.text_input("Type ur answer in English:", placeholder="e.g. hello")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        check_btn = st.button("💖 Check Answer", use_container_width=True)
+
+    with col2:
+        next_btn = st.button("🎀 Next Word", use_container_width=True)
+
+    if check_btn:
+        if user_answer.strip().lower() == correct_answer.lower():
+            st.balloons()
+            st.success("🌸 Spot on! Absolutely perfect!")
+        else:
+            st.error(f"💕 Close! The correct answer is: **{correct_answer}**")
+
+    if next_btn:
+        del st.session_state.word
+        st.rerun()
