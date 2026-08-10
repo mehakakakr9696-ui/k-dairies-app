@@ -65,7 +65,7 @@ if st.session_state.page == "Home":
             """
         )
 
-       if st.button("🔤 Start Learning Hangul"):
+    if st.button("🔤 Start Learning Hangul"):
           st.success("Hangul lessons are ready! 🎉")
           
 
