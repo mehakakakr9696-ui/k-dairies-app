@@ -65,9 +65,9 @@ if st.session_state.page == "Home":
             """
         )
 
-        if st.button("Start Hangul →", use_container_width=True):
-            st.session_state.page = "Hangul"
-            st.rerun()
+       if st.button("🔤 Start Learning Hangul"):
+    st.session_state.page = "🔤 Hangul Audio & Sound Guide"
+    st.rerun()
 
     with col2:
         st.markdown(
