@@ -120,15 +120,15 @@ elif tab == "2. Syllable Box (C + V)":
     st.markdown(
         f"""
         <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 30px 0;">
-            <div style="border: 2px dashed #4A90E2; padding: 15px 25px; border-radius: 10px; font-size: 36px; font-weight: bold; background-color: #f0f4f8;">
+            <div style="border: 2px dashed #4A90E2; padding: 15px 25px; border-radius: 10px; font-size: 36px; font-weight: bold; background-color: #f0f4f8; color: #6B1E3E">
                 {sel_c}
             </div>
             <span style="font-size: 28px;">+</span>
-            <div style="border: 2px dashed #E91E63; padding: 15px 25px; border-radius: 10px; font-size: 36px; font-weight: bold; background-color: #fdf0f4;">
+            <div style="border: 2px dashed #E91E63; padding: 15px 25px; border-radius: 10px; font-size: 36px; font-weight: bold; background-color: #fdf0f4; color: #6B1E3E">
                 {sel_v}
             </div>
             <span style="font-size: 28px;">=</span>
-            <div style="border: 3px solid #2ECC71; padding: 20px 35px; border-radius: 10px; font-size: 48px; font-weight: bold; background-color: #eafaf1;">
+            <div style="border: 3px solid #2ECC71; padding: 20px 35px; border-radius: 10px; font-size: 48px; font-weight: bold; background-color: #eafaf1; color: #6B1E3E">
                 {syllable}
             </div>
         </div>
