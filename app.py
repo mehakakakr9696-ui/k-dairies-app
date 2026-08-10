@@ -30,6 +30,7 @@ st.write(
 st.markdown("""
 <div style="
     background-color: #fff0f5;
+    color: #8B1E3F;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
