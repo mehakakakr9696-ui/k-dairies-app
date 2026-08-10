@@ -138,6 +138,8 @@ elif tab == "2. Syllable Box (C + V)":
     )
 
     st.markdown("---")
+    if st.button("🔊 Listen to pronunciation"):
+       st.info(f"Listen and repeat: {syllable}")
     st.subheader("📖 Example Words Made with Side-by-Side Blocks")
     
     st.write("• **다리** (da-ri) = Leg / Bridge [ㄷ+ㅏ] + [ㄹ+ㅣ]")
