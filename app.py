@@ -66,8 +66,8 @@ if st.session_state.page == "Home":
         )
 
        if st.button("🔤 Start Learning Hangul"):
-    st.session_state.page = "🔤 Hangul Audio & Sound Guide"
-    st.rerun()
+          st.success("Hangul lessons are ready! 🎉")
+          
 
     with col2:
         st.markdown(
