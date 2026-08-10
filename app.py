@@ -271,3 +271,118 @@ elif page == "🎴 Vocab Practice":
     if next_btn:
         del st.session_state.word
         st.rerun()
+        import streamlit as st
+
+# Page Configuration
+st.set_page_config(page_title="K-dairies | Learn Hangul", page_icon="🌸", layout="centered")
+
+# Custom Styling
+st.markdown("""
+    <style>
+    .hangul-card {
+        background-color: #fff0f5;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ffb6c1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .hangul-char {
+        font-size: 48px;
+        font-weight: bold;
+        color: #d87093;
+        margin: 0;
+    }
+    .sound-desc {
+        color: #555;
+        font-size: 14px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Sidebar attribution
+st.sidebar.title("🌸 K-dairies")
+st.sidebar.caption("Developed with 🌸 by **Your Name**")
+st.sidebar.caption("[GitHub Repository](https://github.com/your-username/k-dairies)")
+
+# Main Header
+st.title("🔤 K-dairies: Hangul Mastery (한글)")
+st.write("Master the Korean alphabet, sounds, and voices from scratch!")
+
+# --- NAVIGATION TABS ---
+tab1, tab2, tab3 = st.tabs(["🔊 Basic Consonants", "🌸 Basic Vowels", "🎙️ Sound Rules & Voices"])
+
+# --- TAB 1: CONSONANTS ---
+with tab1:
+    st.subheader("1. Basic Consonants (자음)")
+    st.write("Click on any letter to see how it sounds in English and voiced examples!")
+
+    consonants = [
+        {"char": "ㄱ", "name": "Giyeok (기역)", "sound": "G / K sound", "example": "고기 (Gogi - Meat)"},
+        {"char": "ㄴ", "name": "Nieun (니은)", "sound": "N sound", "example": "나무 (Namu - Tree)"},
+        {"char": "ㄷ", "name": "Digeut (디귿)", "sound": "D / T sound", "example": "다리 (Dari - Leg/Bridge)"},
+        {"char": "ㄹ", "name": "Rieul (리을)", "sound": "R / L sound (Soft flap)", "example": "라면 (Ramen)"},
+        {"char": "ㅁ", "name": "Mieum (미음)", "sound": "M sound", "example": "마음 (Maeum - Heart)"},
+        {"char": "ㅂ", "name": "Bieup (비읍)", "sound": "B / P sound", "example": "바다 (Bada - Sea)"},
+        {"char": "ㅅ", "name": "Siot (시옷)", "sound": "S / SH sound", "example": "사랑 (Sarang - Love)"},
+        {"char": "ㅇ", "name": "Ieung (이응)", "sound": "Silent at start / 'NG' at end", "example": "안녕 (Annyeong)"},
+        {"char": "ㅈ", "name": "Jieut (지읒)", "sound": "J / CH sound", "example": "지구 (Jigu - Earth)"},
+    ]
+
+    col1, col2 = st.columns(2)
+    for index, c in enumerate(consonants):
+        target_col = col1 if index % 2 == 0 else col2
+        with target_col:
+            st.markdown(f"""
+            <div class="hangul-card">
+                <p class="hangul-char">{c['char']}</p>
+                <b>{c['name']}</b><br>
+                <span class="sound-desc">🔊 Sound: <b>{c['sound']}</b></span><br>
+                <small>Ex: {c['example']}</small>
+            </div>
+            """, unsafe_allow_html=True)
+
+# --- TAB 2: VOWELS ---
+with tab2:
+    st.subheader("2. Basic Vowels (모음)")
+    st.write("Korean vowels are shaped based on Heaven (•), Earth (━), and Man (┃).")
+
+    vowels = [
+        {"char": "ㅏ", "sound": "'Ah' (like in Father)"},
+        {"char": "ㅑ", "sound": "'Yah' (like in Yard)"},
+        {"char": "ㅓ", "sound": "'Eoh' (like in Up / Uh)"},
+        {"char": "ㅕ", "sound": "'Yeoh' (like in Young)"},
+        {"char": "ㅗ", "sound": "'Oh' (like in Boat)"},
+        {"char": "ㅛ", "sound": "'Yoh' (like in Yo-yo)"},
+        {"char": "ㅜ", "sound": "'Oo' (like in Moon)"},
+        {"char": "ㅠ", "sound": "'Yoo' (like in You)"},
+        {"char": "ㅡ", "sound": "'Eu' (soft 'U' with flat lips)"},
+        {"char": "ㅣ", "sound": "'Ee' (like in See)"},
+    ]
+
+    cols = st.columns(2)
+    for idx, v in enumerate(vowels):
+        with cols[idx % 2]:
+            st.info(f"### **{v['char']}** — {v['sound']}")
+
+# --- TAB 3: SOUND RULES & VOICING ---
+with tab3:
+    st.subheader("3. Voicing & Pronunciation Secrets")
+    
+    st.markdown("""
+    #### 🗣️ The "Voiced" Consonant Shift
+    In Korean, certain consonants change their voice depending on where they appear in a word:
+    
+    * **ㄱ (Giyeok):** Sounds like a soft **K** at the beginning of a word (*K-pop*), but sounds like a soft **G** between vowels (*Gogi*).
+    * **ㅂ (Bieup):** Sounds like **P** at the start of a sentence, but shifts to **B** between vowels.
+    * **ㄹ (Rieul):** Sounds like a light **R** when between vowels (*Sarang*), but changes to an **L** when placed at the bottom position (*Batchim*).
+
+    ---
+    
+    #### 🧩 How Syllables are Formed (Block System)
+    Korean is written in **syllable blocks**, combining at least 1 Consonant + 1 Vowels:
+    
+    * **Consonant + Vertical Vowel:** ㄱ + ㅏ = **가** (Ga)
+    * **Consonant + Horizontal Vowel:** ㄱ + ㅗ = **고** (Go)
+    * **Consonant + Vowel + Final Consonant (Batchim):** ㄱ + ㅏ + ㅁ = **감** (Gam)
+    """)
