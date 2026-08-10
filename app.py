@@ -10,6 +10,7 @@ st.markdown("""
 <style>
 .home-box {
     background-color: #ffe6f0;
+    color: #8B1E3F
     padding: 30px;
     border-radius: 20px;
     text-align: center;
