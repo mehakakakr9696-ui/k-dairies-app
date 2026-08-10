@@ -27,6 +27,19 @@ st.write(
     "Learn Korean step by step through Hangul, "
     "syllables, pronunciation, and practice."
 )
+st.markdown("""
+<div style="
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 15px;
+">
+    <h3>안녕하세요! 👋</h3>
+    <p>Welcome to your Korean-learning journey!</p>
+    <p>🌱 Learn • 🎧 Listen • 🧠 Practice • 🇰🇷 Discover</p>
+</div>
+""", unsafe_allow_html=True)
 
 st.divider()
 # App Header
