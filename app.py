@@ -66,7 +66,9 @@ if st.session_state.page == "Home":
         )
 
     if st.button("🔤 Start Learning Hangul"):
-          st.success("Hangul lessons are ready! 🎉")
+        st.session_state["page"] = "Hangul"
+        st.rerun()
+    
           
 
     with col2:
