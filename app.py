@@ -91,22 +91,3 @@ if st.session_state.page == "Home":
 
     st.write("")
     st.write("💗 Made with Python & Streamlit")
-    .home-container {
-    text-align: center;
-    padding: 40px 20px 30px 20px;
-}
-
-.home-container h1 {
-    font-size: 55px;
-    margin-bottom: 5px;
-}
-
-.home-container h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.home-container p {
-    font-size: 17px;
-    opacity: 0.85;
-}
