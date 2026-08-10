@@ -17,7 +17,6 @@ page = st.sidebar.radio(
     "Navigate",
     ["🏠 Home", "🔤 Hangul Audio & Sound Guide"]
 )
-
 if page == "🏠 Home":
     st.session_state.page = "Home"
 else:
