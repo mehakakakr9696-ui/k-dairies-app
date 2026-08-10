@@ -6,7 +6,29 @@ st.set_page_config(
     page_icon="🇰🇷",
     layout="centered"
 )
+st.markdown("""
+<style>
+.home-box {
+    background-color: #ffe6f0;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+</style>
+""", unsafe_allow_html=True)
+# Home page
+st.markdown(
+    '<div class="home-box"><h1>🌸 Welcome to K-Diaries</h1></div>',
+    unsafe_allow_html=True
+)
+st.subheader("Your little journey into Korean 🇰🇷")
 
+st.write(
+    "Learn Korean step by step through Hangul, "
+    "syllables, pronunciation, and practice."
+)
+
+st.divider()
 # App Header
 st.title("🇰🇷 K-Diaries: Learn Hangul")
 st.caption("Master Korean step-by-step from characters to syllable blocks!")
