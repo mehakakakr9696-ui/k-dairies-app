@@ -180,3 +180,52 @@ elif tab == "3. Practice & Quiz":
             st.balloons()
         else:
             st.error("Try again! Hint: Silent consonant is ㅇ, 'i' sound is ㅣ.")
+
+st.subheader("🧩 Syllable Box 2")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    <div style="
+        background-color: #f0f4f8;
+        color: #6B1E3E;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    ">
+    ㄴ
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div style="
+        background-color: #fdf0f4;
+        color: #6B1E3E;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+    ">
+    ㅏ
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div style="
+        background-color: #eafaf1;
+        color: #6B1E3E;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+    ">
+    나
+    </div>
+    """, unsafe_allow_html=True)
