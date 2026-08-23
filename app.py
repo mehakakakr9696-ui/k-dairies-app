@@ -184,7 +184,7 @@ elif tab == "3. Practice & Quiz":
 
             st.subheader("🧩 Syllable Box 2")
 
-col1, col2, col3 = st.columns(3)
+            col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
