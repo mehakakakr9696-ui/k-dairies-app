@@ -180,8 +180,9 @@ elif tab == "3. Practice & Quiz":
             st.balloons()
         else:
             st.error("Try again! Hint: Silent consonant is ㅇ, 'i' sound is ㅣ.")
+    if tab == "2. Syllable Box (C + V)":
 
-st.subheader("🧩 Syllable Box 2")
+            st.subheader("🧩 Syllable Box 2")
 
 col1, col2, col3 = st.columns(3)
 
