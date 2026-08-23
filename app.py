@@ -186,8 +186,8 @@ elif tab == "3. Practice & Quiz":
 
             col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.markdown("""
+            with col1:
+            st.markdown("""
     <div style="
         background-color: #f0f4f8;
         color: #6B1E3E;
@@ -201,7 +201,7 @@ with col1:
     </div>
     """, unsafe_allow_html=True)
 
-with col2:
+            with col2:
     st.markdown("""
     <div style="
         background-color: #fdf0f4;
@@ -216,7 +216,7 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-with col3:
+           with col3:
     st.markdown("""
     <div style="
         background-color: #eafaf1;
