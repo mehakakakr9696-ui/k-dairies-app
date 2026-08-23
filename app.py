@@ -186,7 +186,7 @@ elif tab == "3. Practice & Quiz":
 
             col1, col2, col3 = st.columns(3)
 
-    with col1:
+        with col1:
     st.markdown("""
     <div style="
         background-color: #f0f4f8;
@@ -201,7 +201,7 @@ elif tab == "3. Practice & Quiz":
     </div>
     """, unsafe_allow_html=True)
 
-    with col2:
+        with col2:
     st.markdown("""
     <div style="
         background-color: #fdf0f4;
@@ -216,7 +216,7 @@ elif tab == "3. Practice & Quiz":
     </div>
     """, unsafe_allow_html=True)
 
-    with col3:
+        with col3:
     st.markdown("""
     <div style="
         background-color: #eafaf1;
