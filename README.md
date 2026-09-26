@@ -2,7 +2,7 @@
 
 > An interactive web application built with Python and Streamlit to learn and practice Korean vocabulary.
 
-[🚀 Live Demo Link](https://k-dairies-app-jppzcb24ujvxohjjuappjn.s)
+[🚀 Live Demo Link](https://k-dairies-app-jppzcb24ujvxohjjuappjn.streamlit.app/)
 ---
 
 ## 📌 Project Overview
