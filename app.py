@@ -75,12 +75,25 @@ if tab == "1. Vowels & Consonants":
         st.write("• **ㅅ** - s")
         st.write("• **ㅇ** - silent (start) / ng (end)")
         st.write("• **ㅈ** - j")
+        st.write("• **ㅊ** - ch")
+        st.write("• **ㅋ** - k")
+        st.write("• **ㅌ** - t")
+        st.write("• **ㅍ** - p")
+        st.write("• **ㅎ** - h")
 
     with col_v:
         st.subheader("Vertical Vowels (모음)")
-        st.write("• **ㅏ** - a (like *f**a**ther*)")
-        st.write("• **ㅓ** - eo (like *s**aw***)")
-        st.write("• **ㅣ** - i (like *s**ee***)")
+        st.write("• **ㅏ** - a" )
+        st.write("• **ㅓ** - eo")
+        st.write("• **ㅣ** - i" )
+        st.write("• **ㅑ** - ya")
+        st.write("• **ㅕ** - yeo")
+        st.write("• **ㅗ** - o")
+        st.write("• **ㅛ** - yo")
+        st.write("• **ㅜ** - u")
+        st.write("• **ㅠ** - yu")
+        st.write("• **ㅡ** - eu")
+        
 
 # ==========================================
 # TAB 2: SYLLABLE BOX (C + V)
