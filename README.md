@@ -14,8 +14,8 @@ K-Diaries is an interactive learning application designed to help language learn
 * **Version Control:** Git & GitHub
 
 ## 🚀 Key Features
-* Dynamic Korean vocabulary practice interface.
-* Real-time feedback to reinforce language learning.
+* Korean vocabulary practice.
+* Practice and quizzes with examples .
 * Lightweight web app accessible directly in the browser with zero installation needed.
 
 ## 💻 Local Setup
