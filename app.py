@@ -49,7 +49,7 @@ st.caption("Master Korean step-by-step from characters to syllable blocks!")
 tab = st.sidebar.radio("Navigate Lessons", [
     "1. Vowels & Consonants", 
     "2. Syllable Box (C + V)", 
-    "3. Practice & quiz"
+    "3. Practice & Quiz"
 ])
 
 # lesson 1 tab view
@@ -139,8 +139,8 @@ elif tab == "2. Syllable Box (C + V)":
         </div>
         """, unsafe_allow_html=True)
 # tab 3 content setup
-elif tab == "3. Practice and Quiz":
-    st.header("3. Practice and Quiz")
+elif tab == "3. Practice & Quiz":
+    st.header("3. Practice & Quiz")
 
     st.subheader("Simple One-Syllable Words")
     st.write("• **가** (ga) = Go `[ㄱ + ㅏ]`")
