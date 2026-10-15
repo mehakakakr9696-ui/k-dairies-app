@@ -123,8 +123,7 @@ elif tab == "2. Syllable Box (C + V)":
     syllable, pronunciation = syllable_map.get((sel_c, sel_v), ("?", "?"))
 
     # Display Syllable Box UI
-    st.markdown(
-        f"""
+    st.markdown(f"""
         <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 30px 0;">
             <div style="border: 2px dashed #4A90E2; padding: 15px 25px; border-radius: 10px; font-size: 36px; font-weight: bold; background-color: #f0f4f8; color: #6B1E3E">
                 {sel_c}
@@ -138,58 +137,50 @@ elif tab == "2. Syllable Box (C + V)":
                 {syllable}
             </div>
         </div>
-        <h3 style="text-align: center; color: #333;">Pronunciation: [{pronunciation}]</h3>
-        """,
-        unsafe_allow_html=True
-    )
+        """, unsafe_allow_html=True)
+# Practice and quiz Tab view
+elif tab == "3. Practice and Quiz":
+    st.header("3. Practice and quiz")
 
-    st.markdown("---")
-    if st.button("🔊 Listen to pronunciation"):
-       st.info(f"Listen and repeat: {syllable}")
-    st.subheader("📖 Example Words Made with Side-by-Side Blocks")
+    st.subheader("Simple One-Syllable Words")
+    st.write("• **가** (ga) = Go `[ㄱ + ㅏ]`")
+    st.write("• **나** (na) = Me / I `[ㄴ + ㅏ]`")
+    st.write("• **사** (sa) = Buy `[ㅅ + ㅏ]`")
+
+    st.write("---")
+    st.subheader(" ? Put Letters in the Box")
+    st.write("Test your Knowledge by assembling the correct syllable blocks")
     
-    st.write("• **다리** (da-ri) = Leg / Bridge [ㄷ+ㅏ] + [ㄹ+ㅣ]")
-    st.write("• **바다** (ba-da) = Sea / Ocean [ㅂ+ㅏ] + [ㄷ+ㅏ]")
-    st.write("• **사자** (sa-ja) = Lion [ㅅ+ㅏ] + [ㅈ+ㅏ]")
-    st.write("• **이사** (i-sa) = Moving house [ㅇ+ㅣ] + [ㅅ+ㅏ]")
-
-# ==========================================
-# TAB 3: PRACTICE & QUIZ
-# ==========================================
-elif tab == "3. Practice & Quiz":
-    st.header("3. Put Letters in the Box!")
-    st.write("Test your knowledge by assembling the correct syllable blocks:")
-
     consonants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ"]
-    vowels = ["ㅏ", "ㅓ", "ㅣ"]
+    vowels = ["ㅏ", "ㅓ", "ㅣ", "ㅑ"]
+    
 
-    st.subheader("Question 1: Make the sound 'ba' (as in 바다 - Sea)")
+    st.subheader("Question 1: Make the syllable 'ga' (as in 가 - Go)")
     q1_c = st.selectbox("Select Consonant:", consonants, key="q1_c")
     q1_v = st.selectbox("Select Vowel:", vowels, key="q1_v")
 
     if st.button("Check Question 1"):
-        if q1_c == "ㅂ" and q1_v == "ㅏ":
-            st.success("🎉 Correct! ㅂ + ㅏ = 바 (ba)")
+        if q1_c == "ㄱ" and q1_v == "ㅏ":
+            st.success("Correct! ㄱ + ㅏ = 가")
             st.balloons()
         else:
-            st.error("Try again! Hint: 'b' sound is ㅂ, 'a' sound is ㅏ.")
+            st.error("Try again! Hint: look for 'g' sound is ㄱ, 'a' sound is ㅏ.")
 
     st.markdown("---")
 
-    st.subheader("Question 2: Make the sound 'i' (as in 이사 - Moving)")
-    q2_c = st.selectbox("Select Consonant:", consonants, key="q2_c")
-    q2_v = st.selectbox("Select Vowel:", vowels, key="q2_v")
+    st.subheader("Question 2: Make the syllable 'na' (as in 나 - Me / I)")
+    q2_c = st.selectbox("Select Consonant:", options=consonants, key="q2_c")
+    q2_v = st.selectbox("Select Vowel:", options=vowels, key="q2_v")
 
     if st.button("Check Question 2"):
-        if q2_c == "ㅇ" and q2_v == "ㅣ":
-            st.success("🎉 Correct! ㅇ + ㅣ = 이 (i)")
+        if q2_c == "ㄴ" and q2_v == "ㅏ":
+            st.success("Correct! ㄴ + ㅏ = 나")
             st.balloons()
         else:
-            st.error("Try again! Hint: Silent consonant is ㅇ, 'i' sound is ㅣ.")
-
+            st.error("Try again! Hint: look for the 'n' sound (ㄴ) and 'a' sound (ㅏ)")
     if tab == "2. Syllable Box (C + V)":
 
-        st.subheader("🔤 Syllable Box 2")
+        st.subheader("Syllable Box 2")
 
         col1, col2, col3 = st.columns(3)
 
