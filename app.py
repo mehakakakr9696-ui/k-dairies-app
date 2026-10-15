@@ -140,7 +140,7 @@ elif tab == "2. Syllable Box (C + V)":
         """, unsafe_allow_html=True)
 # tab 3 content setup
 elif tab == "3. Practice and Quiz":
-    st.header("3. Practice and quiz")
+    st.header("3. Practice and Quiz")
 
     st.subheader("Simple One-Syllable Words")
     st.write("• **가** (ga) = Go `[ㄱ + ㅏ]`")
