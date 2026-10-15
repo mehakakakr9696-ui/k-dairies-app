@@ -52,9 +52,7 @@ tab = st.sidebar.radio("Navigate Lessons", [
     "3. Practice & quiz"
 ])
 
-# ==========================================
-# TAB 1: BASIC VOWELS & CONSONANTS
-# ==========================================
+# lesson 1 tab view
 if tab == "1. Vowels & Consonants":
     st.header("1. Basic Consonants & Vowels")
     st.write("Before making syllable blocks, let's review the basic letters:")
@@ -91,38 +89,36 @@ if tab == "1. Vowels & Consonants":
         st.write("• **ㅠ** - yu")
         st.write("• **ㅡ** - eu")
         
-
-# ==========================================
-# TAB 2: SYLLABLE BOX (C + V)
-# ==========================================
+# Lesson 2 tab view
 elif tab == "2. Syllable Box (C + V)":
     st.header("2. Side-by-Side Syllable Box")
-    st.write("In Korean, individual letters are never written alone. They are combined into **syllable blocks**.")
-    st.info("💡 **Rule:** When a vowel has a vertical line (like **ㅏ, ㅓ, ㅣ**), the consonant sits on the **LEFT** and the vowel sits on the **RIGHT**.")
+    st.write("In Korean, individual letters are never written alone. They are combined into 'syllable blocks'.")
+    st.info(" **Rule:** When a vowel has a vertical line (like ㅏ, ㅣ, ㅓ, ㅑ), the consonant sits on the *LEFT* and the vowel sits on the *RIGHT*.")
 
-    # Data mapping
+    # simple lists for selection box inputs
     consonants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ"]
-    vowels = ["ㅏ", "ㅓ", "ㅣ"]
-
+    vowels = ["ㅏ", "ㅓ", "ㅣ", "ㅑ"]
+    # translations data dictionary
     syllable_map = {
-        ("ㄱ", "ㅏ"): ("가", "ga"), ("ㄱ", "ㅓ"): ("거", "geo"), ("ㄱ", "ㅣ"): ("기", "gi"),
-        ("ㄴ", "ㅏ"): ("나", "na"), ("ㄴ", "ㅓ"): ("너", "neo"), ("ㄴ", "ㅣ"): ("니", "ni"),
-        ("ㄷ", "ㅏ"): ("다", "da"), ("ㄷ", "ㅓ"): ("더", "deo"), ("ㄷ", "ㅣ"): ("디", "di"),
-        ("ㄹ", "ㅏ"): ("라", "ra"), ("ㄹ", "ㅓ"): ("러", "reo"), ("ㄹ", "ㅣ"): ("리", "ri"),
-        ("ㅁ", "ㅏ"): ("마", "ma"), ("ㅁ", "ㅓ"): ("머", "meo"), ("ㅁ", "ㅣ"): ("미", "mi"),
-        ("ㅂ", "ㅏ"): ("바", "ba"), ("ㅂ", "ㅓ"): ("버", "beo"), ("ㅂ", "ㅣ"): ("비", "bi"),
-        ("ㅅ", "ㅏ"): ("사", "sa"), ("ㅅ", "ㅓ"): ("서", "seo"), ("ㅅ", "ㅣ"): ("시", "si"),
-        ("ㅇ", "ㅏ"): ("아", "a"),  ("ㅇ", "ㅓ"): ("어", "eo"), ("ㅇ", "ㅣ"): ("이", "i"),
-        ("ㅈ", "ㅏ"): ("자", "ja"), ("ㅈ", "ㅓ"): ("저", "jeo"), ("ㅈ", "ㅣ"): ("지", "ji"),
+        ("ㄱ", "ㅏ"): ("가", "ga"), ("ㄱ", "ㅓ"): ("거", "geo"), ("ㄱ", "ㅣ"): ("기", "gi"), ("ㄱ", "ㅑ"): ("갸", "gya"),
+        ("ㄴ", "ㅏ"): ("나", "na"), ("ㄴ", "ㅓ"): ("너", "neo"), ("ㄴ", "ㅣ"): ("니", "ni"), ("ㄴ", "ㅑ"): ("냐", "nya"),
+        ("ㄷ", "ㅏ"): ("다", "da"), ("ㄷ", "ㅓ"): ("더", "deo"), ("ㄷ", "ㅣ"): ("디", "di"), ("ㄷ", "ㅑ"): ("댜", "dya"),
+        ("ㄹ", "ㅏ"): ("라", "ra"), ("ㄹ", "ㅓ"): ("러", "reo"), ("ㄹ", "ㅣ"): ("리", "ri"), ("ㄹ", "ㅑ"): ("랴", "rya"),
+        ("ㅁ", "ㅏ"): ("마", "ma"), ("ㅁ", "ㅓ"): ("머", "meo"), ("ㅁ", "ㅣ"): ("미", "mi"), ("ㅁ", "ㅑ"): ("먀", "mya"),
+        ("ㅂ", "ㅏ"): ("바", "ba"), ("ㅂ", "ㅓ"): ("버", "beo"), ("ㅂ", "ㅣ"): ("비", "bi"), ("ㅂ", "ㅑ"): ("뱌", "bya"),
+        ("ㅅ", "ㅏ"): ("사", "sa"), ("ㅅ", "ㅓ"): ("서", "seo"), ("ㅅ", "ㅣ"): ("시", "si"), ("ㅅ", "ㅑ"): ("샤", "sya"),
+        ("ㅇ", "ㅏ"): ("아", "a"),  ("ㅇ", "ㅓ"): ("어", "eo"), ("ㅇ", "ㅣ"): ("이", "i"),  ("ㅇ", "ㅑ"): ("야", "ya"),  
+        ("ㅈ", "ㅏ"): ("자", "ja"), ("ㅈ", "ㅓ"): ("저", "jeo"), ("ㅈ", "ㅣ"): ("지", "ji"), ("ㅈ", "ㅑ"): ("쟈", "jya"),
     }
 
-    st.subheader("🛠️ Build a Syllable Block:")
+    st.subheader(" Build a Syllable Block:")
     col1, col2 = st.columns(2)
 
     with col1:
         sel_c = st.selectbox("Choose Consonant (Left):", consonants)
     with col2:
         sel_v = st.selectbox("Choose Vowel (Right):", vowels)
+    # find the character in our dictionary
 
     syllable, pronunciation = syllable_map.get((sel_c, sel_v), ("?", "?"))
 
