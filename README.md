@@ -21,8 +21,7 @@ K-Diaries is an interactive learning application designed to help language learn
 ## 💻 Local Setup
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/k-dairies-app.git](https://github.com/yourusername/k-dairies-app.git)
-
+git clone [https://github.com/mehakakakr9696-ui/k-dairies-app](https://github.com/mehakakakr9696-ui/k-dairies-app)
 # Install requirements
 pip install -r requirements.txt
 
