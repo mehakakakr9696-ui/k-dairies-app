@@ -16,6 +16,9 @@ st.markdown("""
     border-radius: 15px;
     text-align: center;
 }
+.home-box h1 {
+    color: #8B1E3F
+}
 </style>
 """, unsafe_allow_html=True)
 # Main title display
