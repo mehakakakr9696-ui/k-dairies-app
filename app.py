@@ -138,7 +138,7 @@ elif tab == "2. Syllable Box (C + V)":
             </div>
         </div>
         """, unsafe_allow_html=True)
-# Practice and quiz Tab view
+# tab 3 content setup
 elif tab == "3. Practice and Quiz":
     st.header("3. Practice and quiz")
 
@@ -154,7 +154,6 @@ elif tab == "3. Practice and Quiz":
     consonants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ"]
     vowels = ["ㅏ", "ㅓ", "ㅣ", "ㅑ"]
     
-
     st.subheader("Question 1: Make the syllable 'ga' (as in 가 - Go)")
     q1_c = st.selectbox("Select Consonant:", consonants, key="q1_c")
     q1_v = st.selectbox("Select Vowel:", vowels, key="q1_v")
