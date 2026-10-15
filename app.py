@@ -1,33 +1,30 @@
 import streamlit as st
 
-# Set page title and layout
+# page configurations
 st.set_page_config(
-    page_title="K-Diaries: Learn Hangul",
+    page_title="K-Diaries: Learn Hangul!",
     page_icon="🇰🇷",
     layout="centered"
 )
+# custom css layout block
 st.markdown("""
 <style>
 .home-box {
     background-color: #ffe6f0;
     color: #8B1E3F
-    padding: 30px;
-    border-radius: 20px;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
 }
 </style>
 """, unsafe_allow_html=True)
-# Home page
-st.markdown(
-    '<div class="home-box"><h1>🌸 Welcome to K-Diaries</h1></div>',
-    unsafe_allow_html=True
-)
-st.subheader("Your little journey into Korean 🇰🇷")
+# Main title display
+st.markdown('<div class="home-box"><h1>Welcome to K-Diaries</h1></div>', unsafe_allow_html=True)
+    
 
-st.write(
-    "Learn Korean step by step through Hangul, "
-    "syllables, pronunciation, and practice."
-)
+st.subheader("Your little journey Into Korean")
+
+st.write("Learn Korean step by step through Hangul, syllables, pronunciation, and practice.")
 st.markdown("""
 <div style="
     background-color: #fff0f5;
@@ -37,22 +34,22 @@ st.markdown("""
     text-align: center;
     margin-top: 15px;
 ">
-    <h3>안녕하세요! 👋</h3>
+    <h3>안녕하세요! </h3>
     <p>Welcome to your Korean-learning journey!</p>
-    <p>🌱 Learn • 🎧 Listen • 🧠 Practice • 🇰🇷 Discover</p>
+    <p>📃 Learn • 🎧 Listen • ❤️ Practice • 🇰🇷 Discover</p>
 </div>
 """, unsafe_allow_html=True)
 
 st.divider()
-# App Header
-st.title("🇰🇷 K-Diaries: Learn Hangul")
+# titles for app header section
+st.title("K-Diaries: Learn Hangul")
 st.caption("Master Korean step-by-step from characters to syllable blocks!")
 
-# Navigation sidebar
+# sidebar navigation links
 tab = st.sidebar.radio("Navigate Lessons", [
     "1. Vowels & Consonants", 
     "2. Syllable Box (C + V)", 
-    "3. Practice & Quiz"
+    "3. Practice & quiz"
 ])
 
 # ==========================================
