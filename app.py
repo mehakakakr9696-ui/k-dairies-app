@@ -148,7 +148,7 @@ elif tab == "3. Practice & Quiz":
     st.write("• **사** (sa) = Buy `[ㅅ + ㅏ]`")
 
     st.write("---")
-    st.subheader(" ? Put Letters in the Box")
+    st.subheader("Put Letters in the Box")
     st.write("Test your Knowledge by assembling the correct syllable blocks")
     
     consonants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ"]
