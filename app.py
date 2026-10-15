@@ -1,12 +1,8 @@
 import streamlit as st
 
-# page configurations
-st.set_page_config(
-    page_title="K-Diaries: Learn Hangul!",
-    page_icon="🇰🇷",
-    layout="centered"
-)
-# custom css layout block
+# page setup
+st.set_page_config(page_title="K-Diaries: Learn Hangul!", page_icon="🇰🇷", layout="centered")
+# styling
 st.markdown("""
 <style>
 .home-box {
@@ -21,7 +17,7 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-# Main title display
+#  header section
 st.markdown('<div class="home-box"><h1>Welcome to K-Diaries</h1></div>', unsafe_allow_html=True)
     
 
