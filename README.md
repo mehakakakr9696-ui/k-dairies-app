@@ -1,6 +1,6 @@
 # K-Diaries
 
- An interactive web application built with Python and Streamlit to learn and practice Korean vocabulary.
+ A web app for learning and practicing Korean and essential vocabulary. Built using Python and Streamlit .
 
 [Live Demo](https://k-dairies-app-jppzcb24ujvxohjjuappjn.streamlit.app/)
 
