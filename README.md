@@ -1,24 +1,22 @@
-# 🇰🇷 K-Diaries
+# K-Diaries
 
-> An interactive web application built with Python and Streamlit to learn and practice Korean vocabulary.
+ An interactive web application built with Python and Streamlit to learn and practice Korean vocabulary.
 
-[🚀 Live Demo Link](https://k-dairies-app-jppzcb24ujvxohjjuappjn.streamlit.app/)
----
+[Live Demo](https://k-dairies-app-jppzcb24ujvxohjjuappjn.streamlit.app/)
 
-## 📌 Project Overview
-K-Diaries is an interactive learning application designed to help language learners build and practice Korean Hangul and essential vocabulary through a clean, web-based interface.
 
-## 🛠️ Tech Stack
-* **Language:** Python
-* **UI Framework:** Streamlit
-* **Version Control:** Git & GitHub
 
-## 🚀 Key Features
+## Tech Stack
+* Language: Python
+* Framework: Streamlit
+* Version Control: Git & GitHub
+
+## Features
 * Korean vocabulary practice.
-* Practice and quizzes with examples .
-* Lightweight web app accessible directly in the browser with zero installation needed.
+* Build in quizzes with practical examples.
+* Lightweight, web-based UI with no installation needed.
 
-## 💻 Local Setup
+## Local Setup
 ```bash
 # Clone the repository
 git clone [https://github.com/mehakakakr9696-ui/k-dairies-app](https://github.com/mehakakakr9696-ui/k-dairies-app)
